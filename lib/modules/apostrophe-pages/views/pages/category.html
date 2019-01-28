@@ -1,0 +1,35 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
+
+
+{% block main %}
+  <div class="container">
+    {% for tab in data.home._children %}
+      <h1>{{ tab.title }}</h1>
+    {% endfor %}
+
+{{
+        apos.area(data.page, 'body', {
+    widgets: {
+
+      'recipes': {}
+    }
+  }
+)
+      }}    
+ <!-- 
+  {% if data.page %}
+  <ul class="children">
+    {% for child in data.page._children %}
+      <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}
+-->
+</div>
+
+{% endblock %}

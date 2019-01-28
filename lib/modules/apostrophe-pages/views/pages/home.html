@@ -1,0 +1,36 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
+
+{% block main %}
+  <div class="container">
+    <div class="heading1 text-center">
+      <h1>Meals Made Eezy</h1>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="2000">
+          <img src="img/food01.jpg" class="d-block w-100" alt="food pic 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Fresh Food</h1>
+          </div>
+      </div>
+      <div class="carousel-item" data-interval="2000">
+        <img src="img/food02.jpg" class="d-block w-100" alt="food pic 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Good Food</h1>
+          </div>
+      </div>
+      <div class="carousel-item" data-interval="2000">
+        <img src="img/food03.jpg" class="d-block w-100" alt="food pic 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Easy Food</h1>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}
